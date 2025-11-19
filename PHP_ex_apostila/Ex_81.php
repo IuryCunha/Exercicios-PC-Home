@@ -9,17 +9,17 @@ c) Qual foi a maior idade digitada (podem haver repetições)
 d) Em que posições digitamos a maior idade */
 
 $vetores = [];
-$soma = null;
+$soma = 0;
 $posi25a = [];
 $maiorIdade = 0;
 $posiMaior = [];
 
-for ($i = 1; $i <= 3; $i++) {
+for ($i = 1; $i <= 8; $i++) {
 
     $vetores [$i] = (int) readline("Digite a idade: "); 
 
     $soma = $soma += $vetores [$i];
-    $media = $soma / 3;
+    $media = $soma / 8;
 
     if ($vetores [$i] >= 25) {
         $posi25a [] = $i;
