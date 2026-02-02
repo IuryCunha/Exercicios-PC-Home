@@ -20,3 +20,9 @@ if ($resultado) {
 } else {
     echo "O primeiro número é menor que o segundo.";
 }
+
+/* 
+O PHP imprime:
+1 → se for true
+nada → se for false
+*/
