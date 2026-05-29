@@ -1,4 +1,8 @@
 <?php
+
+/*13) Faça um algoritmo que leia o salário de um funcionário, calcule e mostre o
+seu novo salário, com 15% de aumento.*/
+
 echo "Digite o nome do funcionário: ";
 $nome = fgets(STDIN);
 echo "Digite o salário do funcionário: ";
