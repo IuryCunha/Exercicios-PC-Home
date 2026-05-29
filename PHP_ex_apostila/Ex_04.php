@@ -1,7 +1,14 @@
 <?php
 
-$N1 = 2;
-$N2 = 3;
+/* 4) Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório
+entre eles.
+Ex:
+Digite um valor: 8
+Digite outro valor: 5
+A soma entre 8 e 5 é igual a 13. */
+
+$N1 = 8;
+$N2 = 5;
 $Soma = $N1 + $N2;
 
 
