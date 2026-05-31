@@ -1,5 +1,8 @@
 <?php
 
+/*18) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade 
+dela e depois mostre se ela pode ou não votar.*/
+
 echo "Qual o ano de nascimento? ";
 $anoN = fgets(STDIN);
 
