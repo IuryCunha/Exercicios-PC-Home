@@ -1,5 +1,8 @@
 <?php
 
+/*20) Desenvolva um programa que leia um número inteiro e mostre se ele é PAR ou
+ÍMPAR.*/
+
 echo "digite um numero: ";
 $numero = fgets(STDIN);
 

@@ -1,8 +1,11 @@
 <?php
 
-echo "em que ano você nasceu? ";
+/*21) Faça um algoritmo que leia um determinado ano e mostre se ele é ou não
+BISSEXTO.*/
+
+echo "ano de nascimento: ";
 $ano_Nasc = fgets(STDIN);
-echo "em que ano estamos? ";
+echo "ano atual: ";
 $ano_Atual = fgets(STDIN);
 
 $idade = $ano_Atual - $ano_Nasc;
@@ -13,11 +16,12 @@ var_dump($ano_NascB);
 
 
 if ($ano_NascB != 0) {
-    echo "sua idade é: $idade";
+    echo "seu ano de nascimento não é bisexto" . PHP_EOL;
+    echo "você completa $idade anos esse ano";
 }
 elseif ($ano_NascB == 0) {
     echo "seu ano de nascimento é bisexto " . PHP_EOL;
-    echo "Sua idade é: $idade" . PHP_EOL;
+    echo "voce completa $idade anos esse ano" . PHP_EOL;
     echo "digite seu mês de aniversario ";
     $mes = fgets(STDIN);
     echo "digite seu dia de nascimento: ";
@@ -31,4 +35,3 @@ elseif ($ano_NascB == 0) {
         echo "parece que você não tem a peculiaridade do aniversário bisextoo";
     }
 }
-
