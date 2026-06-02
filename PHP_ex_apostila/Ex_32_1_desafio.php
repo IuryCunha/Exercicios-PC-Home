@@ -1,4 +1,8 @@
 <?php
+
+/* 32) [DESAFIO] Crie um jogo onde o computador vai sortear um número entre 1 e 5 o
+jogador vai tentar descobrir qual foi o valor sorteado. */
+
 echo "tende advinhar um numero de 1 a 5: ";
 $n = readline();
 $na = rand(1,5);

@@ -1,4 +1,7 @@
 <?php
+
+/* 31) [DESAFIO] Crie um jogo de JoKenPo (Pedra-Papel-Tesoura) */ 
+
 echo "Pedra, Papel e Tesoura" . PHP_EOL;
 echo "Jogador 1 escolhe: ";
 $jo1 = readline();
