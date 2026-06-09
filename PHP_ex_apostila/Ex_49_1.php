@@ -8,14 +8,14 @@ $contador = 1;
 while ($contador <= 6) {
     echo "Digite o " . $contador . "° número: ";
     $numero = readline();
-    $contador++;
     $numeroInt = intval($numero);
     if ($numeroInt % 2 == 0) {
-        echo "O " . $contador - 1 . "° número é par" . PHP_EOL;
+        echo "O " . $contador . "° número é par" . PHP_EOL;
         echo "" . PHP_EOL;
     }
     elseif ($numeroInt % 2 != 0) {
-        echo "O " . $contador - 1 . "° número é ímpar" . PHP_EOL;
+        echo "O " . $contador . "° número é ímpar" . PHP_EOL;
         echo "" . PHP_EOL;
     }
+    $contador++;
 }
