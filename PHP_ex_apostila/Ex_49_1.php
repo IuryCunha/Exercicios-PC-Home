@@ -6,8 +6,7 @@ mostre quantos deles são pares e quantos são ímpares.*/
 $contador = 1;
 
 while ($contador <= 6) {
-    echo "Digite o " . $contador . "° número: ";
-    $numero = readline();
+    $numero = readline("Digite o " . $contador . "° número: ");
     $numeroInt = intval($numero);
     if ($numeroInt % 2 == 0) {
         echo "O " . $contador . "° número é par" . PHP_EOL;

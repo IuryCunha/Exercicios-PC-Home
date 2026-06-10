@@ -9,8 +9,7 @@ $numImpar = 0;
 
 while ($contador <= 6) {
 
-    echo "Digite o " . $contador . "° número: ";
-    $numero = readline();
+    $numero = readline("Digite o " . $contador . "° número: ");
     $contador++;
     $numeroInt = intval($numero);
     
