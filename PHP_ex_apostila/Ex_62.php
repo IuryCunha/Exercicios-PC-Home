@@ -10,27 +10,28 @@ c) Quantas pessoas tem 21 anos ou mais. */
 
 $contador = 1;
 $flag = true;
-$break = false;
+$erro = false;
 $idadesDigitadas = 0;
 $soma = 0;
 $media = 0;
 $pessoas21anos = 0;
+$arredondado_baixo = 0;
 
 do {
     echo "Idade da " . $contador . "° Pessoa" . PHP_EOL;
     $idade = readline();
     $contador++;
 
-        if (is_numeric($idade)) {
+        if (filter_var($idade, FILTER_VALIDATE_INT) !== false && $idade >= 0) {
 
             echo "Deseja continuar? (1) para sim e (2) para não." . PHP_EOL;
             $opcao = readline();
 
-            if (is_numeric($opcao) && $opcao == 1 || $opcao == 2) {
+            if ((is_numeric($opcao) && ($opcao == 1 || $opcao == 2))) {
 
                 $idadesDigitadas = $idadesDigitadas + 1;
-
-                $soma = $soma += $idade;
+                //$soma += idade;
+                $soma = $soma + $idade;
                 $media = $soma / $idadesDigitadas;
                 $arredondado_baixo = floor($media);
 
@@ -44,20 +45,20 @@ do {
             }
             else {
                 echo "Insira 1 ou 2 para continuar." . PHP_EOL;
-                $break = true;
+                $erro = true;
                 break;
             }
         }
         else {
             echo "Insira uma informação válida." . PHP_EOL;
-            $break = true;
+            $erro = true;
             break;
         }
 
 }
 while ($flag == true) ;
     
-if ($break == true) {
+if ($erro == true) {
     echo "Reinicie o programa";
 }
 else {
