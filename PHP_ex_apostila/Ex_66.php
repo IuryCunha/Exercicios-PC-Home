@@ -11,8 +11,8 @@ Ex: Digite um valor: 5
 
 $numero = (int) readline("Digite um número: ");
 
-for ($contador = 1; $contador <= 10; $contador++) {
+echo "A tabuada de $numero é: " . PHP_EOL;
 
-    echo "A tabuada de $numero é: " . PHP_EOL;
+for ($contador = 1; $contador <= 10; $contador++) {
     echo "$numero x $contador = " . $contador * $numero . PHP_EOL; 
 }
