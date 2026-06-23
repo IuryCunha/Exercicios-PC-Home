@@ -17,3 +17,13 @@ for ($contador = 1; $contador <= 10; $contador++) {
     $soma += $termo;
 }
 echo "A soma dos 10 primeiros termos é: $soma";
+
+/*
+$termo = $Ptermo;
+
+for ($contador = 1; $contador <= 10; $contador++) {
+    echo $termo . PHP_EOL;
+    $soma += $termo;
+    $termo += $razao;
+}
+*/

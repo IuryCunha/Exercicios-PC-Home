@@ -9,24 +9,25 @@ posições, conforme abaixo:
 $vetores = array_fill(0, 8, 999);
 
 foreach ($vetores as $valor) {
-    echo $valor . " ";
+    echo $valor . "   ";
 }
 
 echo PHP_EOL;
 
 for ($i = 0; $i < count($vetores); $i++) {
-    echo "  $i ";
+    echo "  $i   ";
 }
 
 echo PHP_EOL;
 echo "____________________________________________________________" . PHP_EOL;
+echo PHP_EOL;
 
-$NewArray = [] ;
+$newArray = [] ;
 
 for ($i = 0; $i < 8; $i++) {
-    $NewArray[$i] = 999;
+    $newArray[$i] = 999;
 }
 
-foreach ($NewArray as $item) {
-    echo $item . " ";
+foreach ($newArray as $item) {
+    echo $item . "   ";
 }

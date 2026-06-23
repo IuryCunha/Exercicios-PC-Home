@@ -12,7 +12,7 @@ $homem100 = 0;
 $soma = 0;
 $mediaF = 0;
 $maiorPMasc = null;
-$obtevebreak = false;
+$erro = false;
 
 for ($contador = 1; $contador <= 8; $contador++) {
     
@@ -20,18 +20,17 @@ for ($contador = 1; $contador <= 8; $contador++) {
 
     if ($sexo != 1 && $sexo != 2) {
         echo "Informação inválida, ";
-        $obtevebreak = true;
+        $erro = true;
         break;
     }
     else {
 
-    $peso = readline("Peso da pessoa: ");
+    $peso = (float) readline("Peso da pessoa: ");
 
-        if (is_numeric($peso)) {
+        if (is_numeric($peso) && $peso > 0) {
             if ($sexo == 2) {
                 $mulherCad++;
                 $soma += $peso;
-                $mediaF = $soma / $mulherCad;
             }
             if ($sexo == 1) {
                 if ($peso > 100) {
@@ -44,16 +43,29 @@ for ($contador = 1; $contador <= 8; $contador++) {
         }
         else {
             echo "Informação incorreta, ";
-            $obtevebreak = true;
+            $erro = true;
             break;
         }
     }          
 }
-if ($obtevebreak == false) {
+
+$mediaF = $soma / $mulherCad;
+
+if ($erro == false) {
     echo "Mulheres cadastradas: $mulherCad" . PHP_EOL;
     echo "Homens que pesam mais de 100Kg: $homem100" . PHP_EOL;
-    echo "Média de peso entre as mulheres: " . number_format($mediaF , 2, ',' ,'.') . " KG" . PHP_EOL;
-    echo "O maior peso entre os homens: $maiorPMasc" . PHP_EOL;
+    if ($mulherCad > 0) {
+        echo "Média de peso entre as mulheres: " . number_format($mediaF, 2, ',', '.') . " KG" . PHP_EOL;
+    }
+    else {
+        echo "Nenhuma mulher cadastrada para calcular a média de peso." . PHP_EOL;
+    }
+    if ($maiorPMasc !== null) {
+        echo "O maior peso entre os homens: $maiorPMasc" . PHP_EOL;
+    }
+    else {
+        echo "Nenhum homem cadastrado" . PHP_EOL;
+    }
 }
 else {
     echo "Reinicie o programa";
